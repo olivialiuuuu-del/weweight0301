@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  
+  --color-alo-bone: #F5F2ED;
+  --color-alo-sand: #E8E2D9;
+  --color-alo-sage: #8A9A8E;
+  --color-alo-slate: #4A4E52;
+  --color-alo-ink: #1A1A1A;
+  --color-alo-navy: #1B263B;
+  --color-alo-gold: #C5A059;
+  --color-alo-forest: #2D3A3A;
+  --color-alo-burgundy: #4A1E1E;
+  --color-alo-cream: #FFFDF9;
+}
+
+@layer base {
+  body {
+    @apply bg-alo-bone text-alo-ink font-sans antialiased;
+  }
+}
+
+@layer components {
+  .soft-card {
+    @apply bg-alo-cream rounded-[24px] shadow-sm border border-alo-sand/50 p-8;
+  }
+  
+  .alo-button {
+    @apply bg-alo-navy text-white rounded-full px-8 py-3 transition-all hover:bg-alo-ink font-medium tracking-wide;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    @apply text-[10px] uppercase tracking-[0.2em] font-bold text-alo-slate/40;
+  }
+
+  .small-caps {
+    @apply text-[10px] uppercase tracking-[0.15em] font-bold text-alo-slate/40;
+  }
+
+  .oval-mask {
+    border-radius: 50% / 40%;
+  }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
